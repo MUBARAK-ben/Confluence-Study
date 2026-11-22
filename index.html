@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confluence Study Hub — Abuja &amp; Kogi Learner Resource Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand">CONFLUENCE <span>STUDY</span></a>
+      <nav class="nav-links">
+        <a href="#resources">Resources</a>
+        <a href="#habits">Study Habits</a>
+      </nav>
+      <a href="#resources" class="btn btn-primary">Explore Guides</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">LEARNER &amp; STUDENT RESOURCE DIRECTORY</p>
+          <h1>Structured study tools for focused progress.</h1>
+          <p class="hero-copy">
+            A clean resource hub designed around practical revision workflows, clear topic breakdowns, and hands-on practice for students across Abuja, Kogi, and beyond.
+          </p>
+          <div class="search-box">
+            <label for="resourceSearch" class="sr-only">Search study resources</label>
+            <input
+              type="search"
+              id="resourceSearch"
+              placeholder="Search topic (e.g. revision, HTML, essay, exam)..."
+            />
+          </div>
+        </div>
+
+        <aside class="checklist-card">
+          <span class="badge">Session Checklist</span>
+          <h2><span id="checkedCount">1</span> / <span id="totalChecks">3</span> Ready</h2>
+          <p>Check off steps as you set up a focused study or build block.</p>
+          <ul class="check-list" id="sessionChecklist">
+            <li>
+              <label>
+                <input type="checkbox" class="session-check" checked />
+                <span>Pick one clear topic or build task</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="session-check" />
+                <span>Set a 45-minute distraction-free timer</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="session-check" />
+                <span>Summarize key points in your own words</span>
+              </label>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">CURATED MODULES</p>
+            <h2>Study &amp; Practice Guides</h2>
+          </div>
+          <div class="filter-pills" role="group" aria-label="Filter study resources">
+            <button class="filter-pill active" data-track="all" type="button">All</button>
+            <button class="filter-pill" data-track="revision" type="button">Exam &amp; Revision</button>
+            <button class="filter-pill" data-track="tech" type="button">Web &amp; Tech Labs</button>
+            <button class="filter-pill" data-track="writing" type="button">Reading &amp; Writing</button>
+          </div>
+        </div>
+
+        <div class="resources-grid">
+          <article class="resource-card" data-track="revision" data-tags="exam revision past questions timetable">
+            <div class="card-top">
+              <span class="track-label">Exam &amp; Revision</span>
+              <span class="duration">45 min block</span>
+            </div>
+            <h3>Active Recall Topic Sheet</h3>
+            <p>Turn syllabus headings into short self-test questions and answer them from memory before checking notes.</p>
+            <div class="card-foot">
+              <span><strong>Focus:</strong> Concept retention</span>
+              <button class="bookmark-btn" type="button">Save</button>
+            </div>
+          </article>
+
+          <article class="resource-card" data-track="tech" data-tags="html css javascript layout responsive">
+            <div class="card-top">
+              <span class="track-label">Web &amp; Tech Labs</span>
+              <span class="duration">60 min build</span>
+            </div>
+            <h3>Responsive Grid &amp; Flex Drill</h3>
+            <p>Practice building clean multi-column cards and testing mobile stacking at narrow screen widths.</p>
+            <div class="card-foot">
+              <span><strong>Focus:</strong> Front-end layout</span>
+              <button class="bookmark-btn" type="button">Save</button>
+            </div>
+          </article>
+
+          <article class="resource-card" data-track="writing" data-tags="essay outline clarity structure paragraphs">
+            <div class="card-top">
+              <span class="track-label">Reading &amp; Writing</span>
+              <span class="duration">30 min draft</span>
+            </div>
+            <h3>Clear Argument &amp; Essay Outline</h3>
+            <p>Map out a central thesis, three supporting points, and concise transitions before writing full paragraphs.</p>
+            <div class="card-foot">
+              <span><strong>Focus:</strong> Structured writing</span>
+              <button class="bookmark-btn" type="button">Save</button>
+            </div>
+          </article>
+
+          <article class="resource-card" data-track="revision" data-tags="weekly planner mistakes review summary">
+            <div class="card-top">
+              <span class="track-label">Exam &amp; Revision</span>
+              <span class="duration">25 min review</span>
+            </div>
+            <h3>Mistake Log &amp; Weekly Recap</h3>
+            <p>Record tricky errors in a dedicated log and review them at the end of each week so the same slip rarely repeats.</p>
+            <div class="card-foot">
+              <span><strong>Focus:</strong> Error correction</span>
+              <button class="bookmark-btn" type="button">Save</button>
+            </div>
+          </article>
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+          No study guides matched that search. Try words like <strong>revision</strong>, <strong>layout</strong>, or <strong>essay</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section id="habits" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">CONSISTENT PRACTICE</p>
+        <h2>Core Study Habits</h2>
+        <div class="habits-grid">
+          <div class="habit-card">
+            <h3>Start Small, Stay Consistent</h3>
+            <p>Short, repeatable daily study sessions beat last-minute cramming and keep momentum steady across busy weeks.</p>
+          </div>
+          <div class="habit-card">
+            <h3>Teach to Test Understanding</h3>
+            <p>Explaining a concept aloud in plain language quickly reveals any gaps that need another look.</p>
+          </div>
+          <div class="habit-card">
+            <h3>Separate Drafting from Polishing</h3>
+            <p>Get your ideas and structure down first, then refine wording, spacing, and details in a second pass.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>CONFLUENCE STUDY</strong> — Learner Resource Portfolio Project</p>
+      <p>Built by Abdullah Mubarak • HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+</body>
+</html>
